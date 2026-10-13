@@ -1,7 +1,15 @@
 Hash table:
 
+Good for sparse memory but iterating is less efficient because of scattered memory. Easy to add/remove. Lookup is O(1).
+
 Map:
+
+New entries need extra memory and lookup is slower (O(log N)) than hash tables. Easy to add/remove but tree traversal is less cache friendly.
 
 Sparse mapping 1:
 
+Fast lookup (O(1)), but wastes memory for missing components. Cache locality is better when accessing different components of one entity. Easy to add but component types cant be changed at runtime.
+
 Sparse mapping 2:
+
+Fast lookup (O(1)), but also wastes memory for missing components. Cache locality is better when accessing the same component across many entities. Easy to add but component types cant be changed at runtime.
